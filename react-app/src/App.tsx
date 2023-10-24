@@ -1,37 +1,27 @@
-import { useEffect, useState } from 'react'
-import Header from './components/Header'
-import Post from './components/Post'
-import { PostModel } from './models/PostModel'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import InnovationPage from './pages/InnovationPage'
+import ArticlePage from './pages/ArticlePage'
+import Root from './components/Root'
+import ErrorPage from './pages/ErrorPage'
 
-function App() {
-  const [posts, setPosts] = useState<Array<PostModel>>([])
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <InnovationPage />
+      },
+      {
+        path: '/artigo',
+        element: <ArticlePage />
+      }
+    ]
+  }
+])
 
-  useEffect(() => {
-    fetch('http://localhost:8000/?rest_route=/wp/v2/posts')
-      .then((response) => response.json())
-      .then((posts) =>
-        setPosts(
-          posts.map((post: any) => ({
-            id: post.id,
-            title: post.title.rendered,
-            content: post.content.rendered,
-            author: post.author,
-            modified_gmt: post.modified_gmt
-          }))
-        )
-      )
-  }, [])
-
-  console.log(posts)
-
-  return (
-    <div>
-      <Header title="BLOG" subtitle="Inovação e Tecnologia" />
-      {posts.map((post) => (
-        <Post key={post.id} post={post} />
-      ))}
-    </div>
-  )
-}
+const App = () => <RouterProvider router={router} />
 
 export default App

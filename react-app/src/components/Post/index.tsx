@@ -10,16 +10,11 @@ const Post = ({ post }: Props) => {
     <PostContainer>
       <img src="https://picsum.photos/353/198" alt="post" />
       <h2>{post.title}</h2>
-      <div>
-        {post.content.split(/<p>|<\/p>/g).map(
-          (content, index) =>
-            !!content && (
-              <p className="text_content" key={index}>
-                {content}
-              </p>
-            )
-        )}
-      </div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: post.content
+        }}
+      />
       <p>
         {new Date(post.modified_gmt).toLocaleString('pt-BR', {
           day: '2-digit',
