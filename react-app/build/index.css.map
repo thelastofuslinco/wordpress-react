@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;EACE,UAAU;EACV,SAAS;AACX","sources":["webpack://my-app/./src/styles.css"],"sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n}\n"],"names":[],"sourceRoot":""}

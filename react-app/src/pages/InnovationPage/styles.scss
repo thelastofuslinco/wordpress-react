@@ -1,0 +1,29 @@
+.InnovationPageContainer {
+  background-color: #ffffff;
+  padding: 106px 120px;
+
+  > h2 {
+    color: #333;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .innovationContent {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 63px;
+
+    > img {
+      width: 688px;
+      height: 418px;
+    }
+  }
+
+  .postList {
+    display: flex;
+    gap: 69px;
+  }
+}

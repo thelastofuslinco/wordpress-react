@@ -1,0 +1,19 @@
+{
+  "$schema": "<https://schemas.wp.org/trunk/block.json>",
+
+  "apiVersion": 2,
+
+  "name": "react-plugin/post",
+
+  "title": "React plugin post",
+
+  "category": "layout",
+
+  "icon": "button",
+
+  "editorScript": "file:./index.js",
+
+  "viewScript": "file:./frontend.js",
+
+  "style": "file:./index.css"
+}

@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         element: <InnovationPage />
       },
       {
-        path: '/artigo',
+        path: '/artigo/:id',
         element: <ArticlePage />
       }
     ]

@@ -1,3 +1,5 @@
+import './styles.scss'
+import * as imageSrc from '../../images/headerImage.png'
 interface Props {
   title: string
   subtitle: string
@@ -5,9 +7,10 @@ interface Props {
 
 const Header = ({ title, subtitle }: Props) => {
   return (
-    <div>
+    <div className="headerContainer">
       <h1>{title}</h1>
       <h2>{subtitle}</h2>
+      <img src={imageSrc.default} alt="" />
     </div>
   )
 }

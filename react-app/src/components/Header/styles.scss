@@ -1,0 +1,32 @@
+.headerContainer {
+  background: linear-gradient(90deg, #014898 1.91%, rgba(1, 72, 152, 0) 92.58%);
+  padding: 49px 120px;
+  display: flex;
+  flex-direction: column;
+
+  > h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  > h2 {
+    color: #fff;
+
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  > img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+}
